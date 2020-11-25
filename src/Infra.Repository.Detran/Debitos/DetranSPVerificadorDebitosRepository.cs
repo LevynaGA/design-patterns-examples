@@ -10,11 +10,6 @@ namespace DesignPatternSamples.Infra.Repository.Detran
     {
         private readonly ILogger _Logger;
 
-        public DetranSPVerificadorDebitosRepository(ILogger<DetranSPVerificadorDebitosRepository> logger)
-        {
-            _Logger = logger;
-        }
-
         public Task<IEnumerable<DebitoVeiculo>> ConsultarDebitos(Veiculo veiculo)
         {
             _Logger.LogDebug($"Consultando débitos do veículo placa {veiculo.Placa} para o estado de SP.");
